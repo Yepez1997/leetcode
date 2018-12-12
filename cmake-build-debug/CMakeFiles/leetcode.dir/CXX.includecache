@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/aurelianoyepez/Desktop/leetcode/algorithms/islands_medium/islands.cpp
+islands.h
+/Users/aurelianoyepez/Desktop/leetcode/algorithms/islands_medium/islands.h
+
+/Users/aurelianoyepez/Desktop/leetcode/algorithms/islands_medium/islands.h
+iostream
+-
+algorithm
+-
+string
+-
+vector
+-
+
