@@ -1,4 +1,6 @@
-class Solution {
+/* Coin Change using Dynamic Programming */
+
+class CoinChange {
 public:
         int coinChange(vector<int>& coins, int amount) {
         vector<int> v(amount+1,amount+1);
@@ -8,11 +10,7 @@ public:
                 v[j]=min(v[j],v[j-coins[i]]+1);  
             }
         }
-            
-        for (int i : v) {
-            cout << i << endl; 
-        }
-            
+              
         if(v[amount]==amount+1)
             return -1;
     
