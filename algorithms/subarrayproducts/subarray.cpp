@@ -33,4 +33,9 @@ public:
         return ans;
     }
 };
-        
+ 
+
+// no reason ... 
+int main() {
+    return 0; 
+}
