@@ -1,3 +1,12 @@
+/*TwoSum : find two ints in array the add to target */ 
+
+/* Commonly used in interviews */
+
+/* ALG : In essence iterate a map 
+ *  for every first value, subtract from target
+ *  the result from target - first should be present in the map 
+ *  if it is present, we are done hence two sum else ...*/
+
 class TwoSum {
 public:
     vector<int> twoSum(vector<int>& nums, int target) {
