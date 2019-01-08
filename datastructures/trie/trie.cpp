@@ -5,62 +5,64 @@
 #include <vector> 
 #include <utility> // for make pair 
 
-using namespace as std; 
+using namespace std; 
 
-int main() {
-    return 0; 
-}
 struct TrieNode {
     bool flag;
     map<char, TrieNode*> next; 
 };
 class Trie {
-private:
-    TrieNode* root;
-    
-public:
-    /** Initialize your data structure here. */
-    Trie() {
-        root = new TrieNode();
-    }
-    
-    /** Inserts a word into the trie. */
-    void insert(string word) {
-        TrieNode* p = root;
-        for (int i = 0; i < word.length(); ++i) {
-            if ((p->next).count(word[i]) <= 0) {
-                // insert a new node if the path does not exist
-                (p->next).insert(make_pair(word[i], new TrieNode()));
-            }
-            p = (p->next)[word[i]];
+    private:
+        TrieNode* root;
+        
+    public:
+        /** Initialize your data structure here. */
+        Trie() {
+            root = new TrieNode();
         }
-        p->flag = true;
-    }
-    
-    /** Returns if the word is in the trie. */
-    bool search(string word) {
-        TrieNode* p = root;
-        for (int i = 0; i < word.length(); ++i) {
-            if ((p->next).count(word[i]) <= 0) {
-                return false;
+        
+        /** Inserts a word into the trie. */
+        void insert(string word) {
+            TrieNode* p = root;
+            for (int i = 0; i < word.length(); ++i) {
+                if ((p->next).count(word[i]) <= 0) {
+                    // insert a new node if the path does not exist
+                    (p->next).insert(make_pair(word[i], new TrieNode()));
+                }
+                p = (p->next)[word[i]];
             }
-            p = (p->next)[word[i]];
+            p->flag = true;
         }
-        return p->flag;
-    }
-    
-    /** Returns if there is any word in the trie that starts with the given prefix. */
-    bool startsWith(string prefix) {
-        TrieNode* p = root;
-        for (int i = 0; i < prefix.length(); ++i) {
-            if ((p->next).count(prefix[i]) <= 0) {
-                return false;
+        
+        /** Returns if the word is in the trie. */
+        bool search(string word) {
+            TrieNode* p = root;
+            for (int i = 0; i < word.length(); ++i) {
+                if ((p->next).count(word[i]) <= 0) {
+                    return false;
+                }
+                p = (p->next)[word[i]];
             }
-            p = (p->next)[prefix[i]];
+            return p->flag;
         }
-        return true;
-    }
+        
+        /** Returns if there is any word in the trie that starts with the given prefix. */
+        bool startsWith(string prefix) {
+            TrieNode* p = root;
+            for (int i = 0; i < prefix.length(); ++i) {
+                if ((p->next).count(prefix[i]) <= 0) {
+                    return false;
+                }
+                p = (p->next)[prefix[i]];
+            }
+            return true;
+        }
 };
+
+
+int main() {
+    return 0; 
+}
 
 /**
  *  API DOCUMENTATION 
