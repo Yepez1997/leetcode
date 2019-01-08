@@ -1,3 +1,15 @@
+#include <map>
+#include <unordered_map>
+#include <iostream>
+#include <string>
+#include <vector> 
+#include <utility> // for make pair 
+
+using namespace as std; 
+
+int main() {
+    return 0; 
+}
 struct TrieNode {
     bool flag;
     map<char, TrieNode*> next; 
@@ -51,6 +63,7 @@ public:
 };
 
 /**
+ *  API DOCUMENTATION 
  * Trie object will be instantiated and called as such:
  * Trie obj = new Trie();
  * obj.insert(word);
