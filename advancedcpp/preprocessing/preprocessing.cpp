@@ -16,6 +16,7 @@
 #define MIN(x, y) (!(x > y) ? x : y)
 #define CONCAT(x, y)  x ## y
 
+// using namespace is like defining the scope of the problem 
 using namespace std; 
 
 int main() {

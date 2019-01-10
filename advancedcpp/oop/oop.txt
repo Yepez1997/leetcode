@@ -50,3 +50,4 @@ variadic functions -> adding multiple args in a function
 
  * Namespaces
     - referred to the scope 
+    - know when in and out the namespce
