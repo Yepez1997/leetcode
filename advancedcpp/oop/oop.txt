@@ -13,7 +13,8 @@ volatile -> signal handler
     - is intended to prevent the compiler from applying any optimizations on 
     - objects that can change in ways that cannot be determined by the compiler
     - ommited off optimzation because values can change
-const-volatile -> 
+    - mutable object 
+const-volatile -> same as const + volatile (non mutable)
 virtuals -> 
 auto -> 
 const -> non mutuable 
@@ -47,4 +48,5 @@ variadic functions -> adding multiple args in a function
  - sort longest data types to shortest
  - explicit inlining to add optimzation, dont add too many else slow down can speed up to 10%
 
- %
+ * Namespaces
+    - referred to the scope 
