@@ -9,9 +9,14 @@ Some OOP Notes to keep in mind
 
 * Keywords 
 final ->  
-volatile -> 
+volatile -> signal handler 
+    - is intended to prevent the compiler from applying any optimizations on 
+    - objects that can change in ways that cannot be determined by the compiler
+    - ommited off optimzation because values can change
+const-volatile -> 
 virtuals -> 
 auto -> 
+const -> non mutuable 
 friend ->
 variadic functions -> adding multiple args in a function 
     -> ... is key 
@@ -33,3 +38,13 @@ variadic functions -> adding multiple args in a function
 
 * String Stream
 - useful for tokenizing & manpilating string 
+
+
+* Optimizations 
+ - STL iterators (for example) are more efficient when altered with the prefix operators.
+    - postfix creates an extra copy 
+ - Structure class and structs fields in the most used vars are first 128bytes 
+ - sort longest data types to shortest
+ - explicit inlining to add optimzation, dont add too many else slow down can speed up to 10%
+
+ %
