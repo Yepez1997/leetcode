@@ -1,0 +1,35 @@
+Some OOP Notes to keep in mind 
+
+* Classes/Structs
+- Class members are default private vs Struct members are defualt public
+- Classes stored on heap of memory 
+- Struct stored in the stack 
+- Stack is a convenient and efficient way of handling value-types as variables
+- Classes have destructors 
+
+* Keywords 
+final ->  
+volatile -> 
+virtuals -> 
+auto -> 
+friend ->
+variadic functions -> adding multiple args in a function 
+    -> ... is key 
+    -> va_list
+    -> va_start 
+    -> va_arg
+
+* Reference 
+- Pass by reference with receiving the adress of the var &var 
+
+* Data Structures 
+- unordered map 
+- vector
+- array 
+- map 
+- forward list 
+- ordered_map
+- priority_queue
+
+* String Stream
+- useful for tokenizing & manpilating string 

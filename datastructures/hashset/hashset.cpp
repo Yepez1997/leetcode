@@ -61,3 +61,11 @@ public:
  * obj.remove(key);
  * bool param_3 = obj.contains(key);
  */
+
+int main() {
+
+
+    return 0;
+}
+
+
