@@ -8,6 +8,7 @@ using namespace std;
 
 int binarySearch(vector<int> arr, int target) {
     int left = 0; 
+    // subract one to maintain offset + 1
     int right = arr.size() - 1;
 
     while (left <= right) {
