@@ -16,6 +16,7 @@
 
 
 
+#define NUM_THREADS 3 
 
 
 

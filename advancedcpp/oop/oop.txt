@@ -51,3 +51,7 @@ variadic functions -> adding multiple args in a function
  * Namespaces
     - referred to the scope 
     - know when in and out the namespce
+    - if two are same name how do we distinguish ?
+    - 'using' -> directive 
+    - access namespce using other resolution ops 
+    - similar to inheritance 
