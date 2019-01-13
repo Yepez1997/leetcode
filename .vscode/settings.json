@@ -16,6 +16,7 @@
         "algorithm": "cpp",
         "iostream": "cpp",
         "cstdlib": "cpp",
-        "vector": "cpp"
+        "vector": "cpp",
+        "string": "cpp"
     }
 }
