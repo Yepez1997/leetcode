@@ -9,26 +9,26 @@ using namespace std;
 
 typedef pair<double, double> coordinates;
 typedef pair<double, coordinates> distances;
+// this was my original errror, fogot to take another vector 
+typedef priority_queue<distances,vector<distances>, greater<distances> >  minheap;
 
-void findKNearest(vector<coordinates> arr, int k) {
+vector<coordinates> findKNearest(vector<coordinates> arr, int k) {
     double distance; 
-    priority_queue<double,vector<double>, greater<double> >  minheap;
+    minheap pq; 
     for (int i = 0; i < (int)arr.size(); ++i) {
         distance = sqrt(pow((arr[i].first),2) + pow((arr[i].second),2));
-        minheap.push(distance);
+        pq.push(make_pair(distance, arr[i]));
     }
-    vector<double> res; 
+    vector<coordinates> results; 
     int count = k;
     while(count != 0) {
-        res.push_back(minheap.top());
-        cout << minheap.top() << endl;
-        minheap.pop();
+        results.push_back(pq.top().second);
+        cout << pq.top().first << endl;
+        pq.pop();
         --count;
     }
 
-    for (int i = 0; i < (int)res.size(); ++i) {
-        cout << res[i] << endl;
-    }
+    return results;
 }
 
 
@@ -36,11 +36,15 @@ void findKNearest(vector<coordinates> arr, int k) {
 int main () {
 
     vector<coordinates> arr; 
-    int k = 1;
-    arr.push_back(make_pair(1,3));
-    arr.push_back(make_pair(2,-2));
-    findKNearest(arr, k);
+    int k = 2;
+    arr.push_back(make_pair(3,3));
+    arr.push_back(make_pair(5,-1));
+    arr.push_back(make_pair(-2,4));
+    vector<coordinates> coord =findKNearest(arr, k);
 
+    for(int j = 0; j < (int)coord.size(); ++j) {
+        cout << "(" << coord[j].first << ", " << coord[j].second  << ")" << endl;
+    }
 
     return 0;
 }
