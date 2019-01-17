@@ -54,6 +54,7 @@ int numIslands(vector<vector<char>>& grid) {
     int number_islands = 0; 
         
     /* essentially do dfs */
+    // always want to iterate row over column
     for (int r = 0; r < nr; r++){
         for (int c = 0; c < nc; c++) {
             if (grid[r][c] == '1'){

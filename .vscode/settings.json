@@ -17,6 +17,8 @@
         "iostream": "cpp",
         "cstdlib": "cpp",
         "vector": "cpp",
-        "string": "cpp"
+        "string": "cpp",
+        "queue": "cpp",
+        "functional": "cpp"
     }
 }
