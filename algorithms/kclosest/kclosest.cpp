@@ -9,7 +9,6 @@ using namespace std;
 
 typedef pair<double, double> coordinates;
 typedef pair<double, coordinates> distances;
-// this was my original errror, fogot to take another vector 
 typedef priority_queue<distances,vector<distances>, greater<distances> >  minheap;
 
 vector<coordinates> findKNearest(vector<coordinates> arr, int k) {
@@ -23,15 +22,11 @@ vector<coordinates> findKNearest(vector<coordinates> arr, int k) {
     int count = k;
     while(count != 0) {
         results.push_back(pq.top().second);
-        cout << pq.top().first << endl;
         pq.pop();
         --count;
     }
-
     return results;
 }
-
-
 
 int main () {
 
