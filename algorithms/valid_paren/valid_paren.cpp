@@ -26,6 +26,8 @@ class ValidParen {
     
     for(int i =0 ; i < s.length(); i++){
         char c = s[i];
+        // if the opp to make sure to get the prev of the same
+        // on the stack else return false 
         if(c == '}'|| c == ')' || c == ']'){
             if(stack.size() == 0 ) return false;
             // easily make code cleaner and use switch case 
