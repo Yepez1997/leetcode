@@ -6,6 +6,12 @@
  * Note that an empty string is also considered valid. 
  */
 
+ #include <stack>
+ #include <iostream>
+
+
+using namespace std;
+
 class ValidParen {
   public:
     bool isValid(string s) {
@@ -22,6 +28,7 @@ class ValidParen {
         char c = s[i];
         if(c == '}'|| c == ')' || c == ']'){
             if(stack.size() == 0 ) return false;
+            // easily make code cleaner and use switch case 
             if(c == '}' && stack.top() != '{') return false;
             if(c == ')' && stack.top() != '(') return false;
             if(c == ']' && stack.top() != '[') return false;

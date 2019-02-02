@@ -10,6 +10,7 @@ using namespace std;
 typedef pair<double, double> coordinates;
 typedef pair<double, coordinates> distances;
 // priority q's by default are ordered by the first elt
+// greater <...> to create a min heap by default a max heap m
 typedef priority_queue<distances,vector<distances>, greater<distances> >  minheap;
 
 vector<coordinates> findKNearest(vector<coordinates> arr, int k) {

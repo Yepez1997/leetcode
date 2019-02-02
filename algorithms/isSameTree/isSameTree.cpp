@@ -22,8 +22,7 @@ struct TreeNode {
     // in respect to the value 
     // and the structure 
 // algorithm succeeds when both left and right are null in that case 
-// return leftTree == rigthTree which translates to NULL == NULL -> True 
-
+// return leftTree == rigthTree which translates to NULL == NULL -> True
 bool isSameTree(TreeNode* leftTree, TreeNode* rightTree) {
     if (leftTree == NULL || rightTree == NULL) {
         return leftTree == rightTree;
@@ -32,4 +31,7 @@ bool isSameTree(TreeNode* leftTree, TreeNode* rightTree) {
     && isSameTree(leftTree->right, rightTree->right));
     
 }
+
+
+
 
