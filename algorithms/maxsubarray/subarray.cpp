@@ -1,4 +1,9 @@
 // Kadanes Algorithm global and curent sum
+#include <vector>
+#include <iostream>
+
+using namespace std;
+
 class MaxSub {
 public:
 int maxSubArray(vector<int>& nums) {

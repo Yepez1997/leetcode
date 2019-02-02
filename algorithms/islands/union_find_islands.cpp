@@ -1,6 +1,12 @@
+#include <vector>
+#include <iostream>
+
+
+using namespace std;
+
 class UnionFind {
 public:
-  UnionFind(vector<vector<char>>& grid) {
+  UnionFind(vector<vector<char > >& grid) {
     count = 0;
     int m = grid.size();
     int n = grid[0].size();
@@ -46,7 +52,7 @@ private:
 
 class Solution {
 public:
-  int numIslands(vector<vector<char>>& grid) {
+  int numIslands(vector<vector<char > >& grid) {
     int nr = grid.size();
     if (!nr) return 0;
     int nc = grid[0].size();
