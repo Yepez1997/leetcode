@@ -1,0 +1,32 @@
+General Common Patters
+    Divide and Conquer
+        Mergesort 
+        Divide into multuple sub probs 
+    Backtrackracking 
+    Two Poiter Approach 
+    Recursion
+        Steps:
+            1. Define the problem w/ variables 
+            2. Define mathematically the Recursion
+            3. Time and Space complixity (Can we improve)
+        Greedy
+        DP 
+        Complexity 
+    Greedy 
+        Usually sort 
+        Scheduling Problems 
+        Knap Sack (Fractional is greey 0/1 is not [if you know you know])
+        Locally Optimum Problems 
+        Not ALWATS OPT, consider coin change problem 
+    Dynamic Programming 
+        Multuple SubProblems 
+        Sub Optimal Problems
+        Bottom Up 
+        Top Down 
+    K largest/smallest 
+    Tree
+    Linked List 
+    Search
+        - Binary Search 
+    Cut Problems in Half 
+    Use Stacks or Queues to Process Data
