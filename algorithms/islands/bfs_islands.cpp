@@ -4,8 +4,11 @@
 #include <iterator>
 #include <iostream>
 #include <vector>
+#include <utility>
 
-int numIslands(vector<vector> &grid) {
+using namespace std;
+
+int numIslands(vector<vector<char> > &grid) {
     int nr = grid.size(); 
     if (!nr) return 0; 
         int nc = grid[0].size(); 
@@ -16,6 +19,7 @@ int numIslands(vector<vector> &grid) {
             if (grid[r][c] == '1') {
                 ++num_islands; 
                 grid[r][c] = '0'; // mark as visited
+                // find all neighbors 
                 queue<pair<int,int>> neighbors; 
                 neighbors.push({r,c});
 

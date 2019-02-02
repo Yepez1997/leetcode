@@ -1,4 +1,11 @@
-#define MAX_LEN 100000          // the amount of buckets
+#define MAX_LEN 100000  
+
+ // the amount of buckets
+ #include <vector>
+ #include <iostream>
+
+ using namespace std; 
+ 
 class MyHashSet {
 private:
     vector<int> set[MAX_LEN];   // hash set implemented by array
@@ -22,7 +29,7 @@ private:
     }
 public:
     /** Initialize your data structure here. */
-    MyHashSet() {
+    MyHashSet() {     
         
     }
     
@@ -32,6 +39,7 @@ public:
         int pos = getPos(key, index);
         if (pos < 0) {
             // Add new key if key does not exist.
+            // push back keys to the list of arrs for the paritucalt index 
             set[index].push_back(key);
         }
     }
@@ -63,8 +71,6 @@ public:
  */
 
 int main() {
-
-
     return 0;
 }
 

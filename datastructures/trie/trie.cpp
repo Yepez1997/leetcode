@@ -5,6 +5,7 @@
 #include <vector> 
 #include <utility> // for make pair 
 
+/* Contruction of a Trie Node*/
 using namespace std; 
 
 struct TrieNode {
@@ -29,14 +30,17 @@ class Trie {
                     // insert a new node if the path does not exist
                     (p->next).insert(make_pair(word[i], new TrieNode()));
                 }
+                // ? 
                 p = (p->next)[word[i]];
             }
+            // true word 
             p->flag = true;
         }
         
         /** Returns if the word is in the trie. */
         bool search(string word) {
             TrieNode* p = root;
+            // first condition tests if a path does not exist 
             for (int i = 0; i < word.length(); ++i) {
                 if ((p->next).count(word[i]) <= 0) {
                     return false;
