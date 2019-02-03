@@ -20,6 +20,7 @@
         "string": "cpp",
         "queue": "cpp",
         "functional": "cpp",
-        "iosfwd": "cpp"
+        "iosfwd": "cpp",
+        "ostream": "cpp"
     }
 }

@@ -4,9 +4,34 @@ SATURDAY -> FEB 2ND
 * SIMPLE TREES
     - LOTS OF TREES 
     - AVL, FUSSION, SPLAY, RED BLACK, B+ (self balancing)
-    - AVL / RED BLACK TREES ####################################
-        -
-        -
+    - AVL / RED BLACK TREES #################################### LOOK AT VIDEOS LATER
+        - BOTH SELF BALANCING TREES
+        - AVL   
+            - DIFFERENCE BETWEEN LEFT AND RIGHT SUBTREE NO GREATER THAN 1 
+            - MIN MAX SEARCH DELETE TAKE O(H) TIME 
+            - SKEWED TREES AT MOST O(N)
+            - HEIGHT OF AVL IS ALWAYS O(LOG(N))
+            - PERFORM SOME REBALANCING TO MAINTAIN O(LOG(N))
+            - FOLLOWING TWO PROPS W/O VIOLATING BST PROPS 
+                - LEFT ROTATION
+                - RIGTH ROTATION 
+            - STEPS FOR INSERT 
+                - 1/ PERFORM STANDARD BST TO INSERT W 
+                - 2/ FROM W TRAVEL UP TO THE FIRST UNBALANCED NODE 
+                - 3/ PERFORM APPROPRIATE ROTATIONS 
+                - 4/ 4 CASES TO CONSIDER 
+                    1/ LEFT LEFT CASE 
+                    2/ LEFT RIGTH CASE 
+                    3/ RIGHT RIGHT CASE 
+                    4/  RIGHT LEFT CASE 
+            - CAUSE MORE ROTATIONS ON INSERTIONS AND DELETIONS 
+
+        - RED BLACK TREES 
+            - EVERY NODE IS EITHER RED OR BLACK 
+            - ROOT OF THE TREE IS ALWAYS BLACK
+            - THERE ARE NO TWO ADJANCENT NODES 
+            - 
+        - IF SEARCH IS FREQUENT CHOSE AVL
     - BINARY TREES
         - RECURSION TAKES UP O(N) SPACE ON CALL STACK
         - TRICKS SUCH AS ITERATIVE IMPLENTATIONS TAKE O(1)
@@ -106,6 +131,7 @@ PROBLEMS TO DO:
     MAX PROFIT 
     TRIE PROBLEM
     ROTATED TREE (BINARY SEARCH)
+    AVL/REDBLACK TREE 
 
 
 SUNDAY FEB 3RD 
