@@ -30,3 +30,24 @@ General Common Patters
         - Binary Search 
     Cut Problems in Half 
     Use Stacks or Queues to Process Data
+
+
+Problem: Search in a Rotated Array in Log(n)
+Outcome: Binary Search and Pivot off left and rigth rotated Array
+         Two Conditions that are important 
+         left -> 0
+         right -? nums.size() - 1
+         ->  if arr[mid] > nums[right] : middle elt on left part
+         ->  if arr[mid] < nums[left] : middle elt on right part 
+         // always check left and rigth conditions based on bounds 
+
+Problem: Merge K Sorted Lists:
+Outcome: Best data structured approach is to use a min heap and insert all elts into the min heap
+         Push lists to priority queue then push the elts in the list to the priority queue
+
+
+
+Other Stuff to Know 
+C++ stuff -> unordered map implements a hashtable
+          -> map implements a balanced binary search 
+          -> multimap can have multiple keys wit the same value 

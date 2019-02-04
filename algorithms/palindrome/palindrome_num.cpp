@@ -5,7 +5,7 @@
 
 using namespace std; 
 
-
+// or you can just use constant space -> if swap elts
 bool isPalindrome(int x) {
         
     std::stack<char> results_reversed; 

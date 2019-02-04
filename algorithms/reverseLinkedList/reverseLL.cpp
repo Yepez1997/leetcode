@@ -13,8 +13,7 @@ struct ListNode {
 };
 
 ListNode* reverseLinkedList(ListNode *head) {
-   
-
+    
     return head; 
 }
 
