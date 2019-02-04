@@ -26,17 +26,6 @@ ListNode* reverseLinkedList(ListNode *head) {
 }
 
 
-
-// iterative have two pointers 
-// RUNNER SHOULD HAVE OUR REVERSED NODE 
-// RUNNER = NULL 
-// while l 
-// Runner = L 
-// 
-// L -> L.NEXT 
-// 
-
-
 int main() {
     // first problem:
     // input: 1->2->3->4->5->NULL
