@@ -13,7 +13,15 @@ struct ListNode {
 };
 
 ListNode* reverseLinkedList(ListNode *head) {
-    
+    ListNode* prev(NULL);
+    ListNode* current = head; 
+    while (head != NULL) {
+        ListNode* next = current->next;
+        current->next = prev;
+        prev = current;
+        current = next; 
+    }
+    head = prev; 
     return head; 
 }
 

@@ -28,15 +28,16 @@ class Trie {
             for (int i = 0; i < word.length(); ++i) {
                 if ((p->next).count(word[i]) <= 0) {
                     // insert a new node if the path does not exist
+                    // map.insert
                     (p->next).insert(make_pair(word[i], new TrieNode()));
                 }
-                // ? 
+                // happens regardless 
                 p = (p->next)[word[i]];
             }
             // true word 
             p->flag = true;
         }
-        
+        // count > 1 results exists 
         /** Returns if the word is in the trie. */
         bool search(string word) {
             TrieNode* p = root;
