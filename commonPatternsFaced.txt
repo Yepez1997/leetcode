@@ -25,7 +25,12 @@ General Common Patters
         Top Down 
     K largest/smallest 
     Tree
+        Iterative or Recursive 
+        Explore with DFS OR BFS 
+        DFS WITH RECURSION OR PERHAPS STACKS 
+        BFS WITH QUEUES
     Linked List 
+        Iterative and Recursive
     Search
         - Binary Search 
     Cut Problems in Half 
@@ -51,3 +56,7 @@ Other Stuff to Know
 C++ stuff -> unordered map implements a hashtable
           -> map implements a balanced binary search 
           -> multimap can have multiple keys wit the same value 
+
+
+Learn to use DFS AND BFS to traverse nodes in a binary tree
+    Queues and Stacks to process data and explore nodes  

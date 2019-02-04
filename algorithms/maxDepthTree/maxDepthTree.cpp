@@ -18,10 +18,6 @@ struct TreeNode {
 
 // recursively take the max of both the left and right side of the tree 
 int maxDepth(TreeNode* root) {
-    if(root == NULL){
-        return 0;
-    }
-    else{
-        return max(maxDepth(root->left) + 1,maxDepth(root->right) + 1);
-    }
+    return root == NULL ? 0 : max(maxDepth(root -> left), maxDepth(root -> right)) + 1;
 }
+
