@@ -6,6 +6,7 @@ using namespace std;
 // trick is to use xor 
 // communitive & associative 
 // A ^ A = 0
+// xor fast multiplication 
 int singleDiffernt(vector<int> arr) {
     int result = 0;
     for (int i = 0; i < (int)arr.size(); i++) {
