@@ -1,5 +1,11 @@
 /*Problem: Given two sorted integer arrays nums1 and nums2, merge nums2 into nums1 as one sorted array. */
-class MergeSortedArrayn {
+
+#include <iostream>
+#include <vector>
+
+using namespace std; 
+
+class MergeSortedArray {
 public:
     void merge(vector<int>& nums1, int m, vector<int>& nums2, int n) {
         // subtract one for indexing 
@@ -12,8 +18,5 @@ public:
         }
     }
 };
-
-
-
 
 

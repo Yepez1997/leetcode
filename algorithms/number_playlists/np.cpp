@@ -1,4 +1,9 @@
 /* Review this */
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
 
 class NumbeMusicPlaylist {
 public:
