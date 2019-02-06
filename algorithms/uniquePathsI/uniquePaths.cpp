@@ -7,6 +7,7 @@ class Solution {
 public:
     int uniquePaths(int m, int n) {
         // init rows and cols 
+        // this is how to init a dp array the easy way 
         int path[m + 1][n+1];
         // init all colums and rows of the zero index to 1 
         for (int i = 0; i < m; i++) {

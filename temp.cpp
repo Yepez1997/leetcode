@@ -1,5 +1,5 @@
 #include <iostream>
-
+#include <limits>
 
 
 
@@ -15,8 +15,16 @@ void tempFunc(string s){
   }
 }
 
+
+
+void numLimitsTests() {
+    cout << numeric_limits<double>::max() << endl; 
+}
+
+
 int main() {
     tempFunc("abcd");
+    numLimitsTests(); 
     return 0;
 
 }

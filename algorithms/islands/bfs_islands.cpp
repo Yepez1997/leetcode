@@ -20,9 +20,9 @@ int numIslands(vector<vector<char> > &grid) {
                 ++num_islands; 
                 grid[r][c] = '0'; // mark as visited
                 // find all neighbors 
-                queue<pair<int,int>> neighbors; 
-                neighbors.push({r,c});
-
+                queue<pair<int,int> > neighbors; 
+                // change the rest to make pair
+                neighbors.push(make_pair(r,c));
                 while (!neighbors.empty()) {
                     auto rc = neighbors.front(); 
                     neighbors.pop(); 
@@ -53,7 +53,6 @@ int numIslands(vector<vector<char> > &grid) {
         }        
     }
 }
-
 
 
 
