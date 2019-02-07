@@ -12,5 +12,8 @@ public:
     }
 };
 
+// xor all elts since xor 
+
+
 
 

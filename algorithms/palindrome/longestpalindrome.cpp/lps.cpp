@@ -5,7 +5,13 @@
 /*
 Longest Palindrome Sequence 
 Given a string determaine the longest palindrome -> words that match start to end 
-
+this uses manachers algorithm 
+an alerntive to this sol is to store matrix of list of words that are pal
+case 1: for all single words -> true for words of len 1 
+case 2: for all double letter words -> true for words of len 2
+case 3: for all triple > words -> true
+    - justify left and right bounds a new j and i varible based on k = 3
+    - reset max len of string (Condition )
 */
 
 using namespace std; 

@@ -20,7 +20,7 @@ struct TreeNode {
     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
 };
 
-
+// use BFS to solve 
 class Solution {
 public:
     int minDepth(TreeNode* root) {
@@ -43,6 +43,8 @@ public:
             return level;   
         }  
 };
+
+
 
 
 
