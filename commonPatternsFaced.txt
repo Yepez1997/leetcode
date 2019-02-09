@@ -60,3 +60,13 @@ C++ stuff -> unordered map implements a hashtable
 
 Learn to use DFS AND BFS to traverse nodes in a binary tree
     Queues and Stacks to process data and explore nodes  
+
+
+THINGS TO DO AND BE AN EXPERT IN:
+TREE TRAVERSAL (IN ORDER, POST ORDER, PRE ORDER)
+    ITERATIVE 
+    RECURSIVE 
+    BFS OR DFS TO TRAVERSE 
+WHEN STUCK THINK OF STACKS, QUEUES, AND HEAPS
+DP/GREEDY 
+
