@@ -9,6 +9,9 @@
 
 using namespace std;
 
+// do a type def coordinates 
+typedef pair<int, int> coordinates; 
+
 int numIslands(vector<vector<char> > &grid) {
     int nr = grid.size(); 
     if (!nr) return 0; 
@@ -20,11 +23,11 @@ int numIslands(vector<vector<char> > &grid) {
                 ++num_islands; 
                 grid[r][c] = '0'; // mark as visited
                 // find all neighbors 
-                queue<pair<int,int> > neighbors; 
+                queue<coordinates > neighbors; 
                 // change the rest to make pair
                 neighbors.push(make_pair(r,c));
                 while (!neighbors.empty()) {
-                    auto rc = neighbors.front(); 
+                    coordinates rc = neighbors.front(); 
                     neighbors.pop(); 
                     int row = rc.first;
                     int col = rc.second; 
