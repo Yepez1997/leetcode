@@ -8,30 +8,36 @@
  */
 #include <iostream>
 
-struct ListNode {
+
+
+using namespace std;
+
+
+/* Node for Linked List */
+struct ListNode
+{
     int val;
     ListNode *next;
     ListNode(int x) : val(x), next(NULL) {}
 };
 
-using namespace std; 
+/* LinkedListCycle: determaine if there exists a cycle in a singlly linked list */
+bool LinkedListCycle(ListNode *head)
+{
+    ListNode *slow;
+    ListNode *fast;
+    slow = fast = head;
 
-class Solution {
-public:
-    bool hasCycle(ListNode *head) {
-        ListNode *slow, *fast;
-        slow = fast = head;
-  
-        while(slow && fast && fast->next)
-        {      
-            fast = fast->next->next;
-            slow = slow->next;
-        
-            if(slow == fast)
-                return true;
-        }
-        return false;
+    // if we reach the end of each pointer -> means no cycle !
+    while (slow && fast && fast->next)
+    {
+        // move fast by two positions -> fast.next.next
+        fast = fast->next->next;
+        // move slow by one position -> slow.next
+        slow = slow->next;
+
+        if (slow == fast)
+            return true;
     }
-};
-
-
+    return false;
+}
