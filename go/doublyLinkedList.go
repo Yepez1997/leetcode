@@ -14,7 +14,7 @@ func NewDoublyLinkedList() *DoublyLinkedList {
 }
 
 func (ll *DoublyLinkedList) setHead(node *Node) {
-	if (ll.head == nil) {
+	if ll.head == nil {
 		ll.head = node
 		ll.tail = node
 		return
@@ -23,7 +23,7 @@ func (ll *DoublyLinkedList) setHead(node *Node) {
 }
 
 func (ll *DoublyLinkedList) setTail(node *Node) {
-	if (ll.tail == nil) {
+	if ll.tail == nil {
 		ll.setHead(node)
 		return 
 	}
@@ -35,27 +35,27 @@ func (ll *DoublyLinkedList) insertBefore(node, nodeToInsert *Node) {
 		return 	
 	}
 	ll.remove(nodeToInsert)
-	nodeToInsert.next = node
 	nodeToInsert.prev = node.prev
-	if node.prev != nil {
-		node.prev.next = nodeToInsert
+	nodeToInsert.next = node
+	if node.prev == nil {
+		ll.head = nodeToInsert
 	} else {
-		ll.head = nodeToInsert 
+		node.prev.next = nodeToInsert 
 	}
 	node.prev = nodeToInsert
 }
 
 func (ll *DoublyLinkedList) insertAfter(node, nodeToInsert *Node) {
-	if (nodeToInsert == ll.tail && nodeToInsert == ll.head) {
+	if nodeToInsert == ll.tail && nodeToInsert == ll.head {
 		return 
 	}
 	ll.remove(nodeToInsert)
 	nodeToInsert.prev = node 
 	nodeToInsert.next = node.next 
-	if (node.next != nil) {
-		node.next.prev = nodeToInsert
-	} else {
+	if node.next == nil {
 		ll.tail = nodeToInsert
+	} else {
+		node.next.prev = nodeToInsert
 	}
 	node.next = nodeToInsert
 }
@@ -68,11 +68,11 @@ func (ll *DoublyLinkedList) insertAtPosition(position int, nodeToInsert *Node) {
 	node := ll.head
 	currentPosition := 1
 	// traverse until the position is found 
-	for (node != nil && currentPosition != position) {
+	for node != nil && currentPosition != position {
 		currentPosition += 1
 		node = node.next
 	}	
-	if node.next == nil {
+	if node == nil {
 		ll.setTail(nodeToInsert)
 	} else {
 		ll.insertBefore(node, nodeToInsert)
@@ -81,44 +81,41 @@ func (ll *DoublyLinkedList) insertAtPosition(position int, nodeToInsert *Node) {
 
 func (ll *DoublyLinkedList) removeNodesWithValue(value int) {
 	node := ll.head 
-	for (node != nil) {
-		if (node.value == value) {
-			ll.remove(node)
-		} 
+	for node != nil {
+		nodeToRemove := node
 		node = node.next 
+		if (nodeToRemove.value == value) {
+			ll.remove(nodeToRemove)
+		} 
 	}
 }
 
 func (ll *DoublyLinkedList) remove(node *Node) {
-	if (node == ll.head) {
-		ll.head.next = nil	
-		return
+	if node == ll.head {
+		ll.head = ll.head.next
 	}
-	if (node == ll.tail) {
-		ll.tail.prev = nil
-		return
+	if node == ll.tail {
+		ll.tail = ll.tail.prev
 	}
 	ll.removeNodeBindings(node)
 }
 	
 func (ll *DoublyLinkedList) containsNodeWithValue(value int) bool {
 	node := ll.head
-	for (node != nil) {
-		if (node.value == value) {
-			return true	
-		}
+	for node != nil && node.value != value {
 		node = node.next; 
+		
 	}
-	return false 
+	return node != nil 
 }
 
 func (ll *DoublyLinkedList) removeNodeBindings(node *Node) {
-	if (node.prev != nil) {
+	if node.prev != nil {
 		node.prev.next = node.next
 	}
-	if (node.next != nil) {
+	if node.next != nil {
 		node.next.prev = node.prev
 	}
-	node.next = nil 
-	node.prev = nil
+	node.prev = nil 
+	node.next = nil
 }
