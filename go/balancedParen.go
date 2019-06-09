@@ -1,7 +1,5 @@
 package program
 
-
-
 func BalancedBrackets(s string) bool {
 	// Write your code here.
 	bracketHash := make(map[rune]rune)
@@ -9,36 +7,45 @@ func BalancedBrackets(s string) bool {
 	bracketHash['}'] = '{'
 	bracketHash[')'] = '('
 	bracketHash[']'] = '['
-	for _,v := range s { 
+	for _, v := range s {
 		switch v {
-			case '}':
+		case '}':
+			if len(bracketStack) == 0 {
+				return false
+			}
 			last := bracketStack[len(bracketStack)-1]
-			bracketStack = bracketStack[0:len(bracketStack)-1]
+			bracketStack = bracketStack[0 : len(bracketStack)-1]
 			if val, ok := bracketHash[v]; ok {
 				if last != val {
 					return false
 				}
 			}
-			case ')':
+		case ')':
+			if len(bracketStack) == 0 {
+				return false
+			}
 			last := bracketStack[len(bracketStack)-1]
-			bracketStack = bracketStack[0:len(bracketStack)-1]
+			bracketStack = bracketStack[0 : len(bracketStack)-1]
 			if val, ok := bracketHash[v]; ok {
 				if last != val {
-					return false 
+					return false
 				}
 			}
-			case ']':
+		case ']':
+			if len(bracketStack) == 0 {
+				return false
+			}
 			last := bracketStack[len(bracketStack)-1]
-			bracketStack = bracketStack[0:len(bracketStack)-1]
+			bracketStack = bracketStack[0 : len(bracketStack)-1]
 			if val, ok := bracketHash[v]; ok {
 				if last != val {
-					return false 
+					return false
 				}
 			}
-			default:
-			bracketStack = append(bracketStack, v)	
+		default:
+			bracketStack = append(bracketStack, v)
 		}
-			
+
 	}
 	return len(bracketStack) == 0
 }
