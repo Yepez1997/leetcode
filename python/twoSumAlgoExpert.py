@@ -1,5 +1,4 @@
 def twoNumberSum(array, targetSum):
-    # Write your code here.
 	mapIndex = {}
 	for i in range(len(array)):
 		mapIndex[array[i]] = i

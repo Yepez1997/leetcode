@@ -9,7 +9,7 @@ class Solution(object):
         """
         heapq.heapify(nums)
         kthLargest = None
-        for i in range(len(nums)+1-k):
+        for _ in range(len(nums)+1-k):
           kthLargest = heapq.heappop(nums)
         return kthLargest
 
