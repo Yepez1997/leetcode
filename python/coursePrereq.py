@@ -10,6 +10,7 @@ class Solution(object):
         if numCourses < 2:
           return True 
         
+        # xrange may compute the exlusive range - only works with python 2 
         graph = [[] for _ in xrange(numCourses)]
         visited = [0 for _ in xrange(numCourses)]
         
