@@ -27,7 +27,6 @@ class Solution(object):
         
     
     def dfs(self, at, visited, graph):
-      
       # checks if there is a cycle 
       if visited[at] == -1:
         return False 

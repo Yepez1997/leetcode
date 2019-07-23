@@ -7,10 +7,6 @@ from Queue import PriorityQueue
 
 class Solution(object):
     def mergeKLists(self, lists):
-        """
-        :type lists: List[ListNode]
-        :rtype: ListNode
-        """
         head = point = ListNode(0)
         pq = PriorityQueue()
         # insert the first n then pop off the next n
