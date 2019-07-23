@@ -1,5 +1,5 @@
 class AssignBikes:
-    def assignBikes(self, workers: List[List[int]], bikes: List[List[int]]) -> List[int]:
+    def assignBikes(self, workers, bikes):
         def dist(w, b):
           return abs(w[0] - b[0]) + abs(w[1] - b[1])
         pairs = [(dist(posw, posb), idxw, idxb) for idxw, posw in enumerate(
