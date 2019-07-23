@@ -5,7 +5,7 @@ from Queue import PriorityQueue
 #         self.val = x
 #         self.next = None
 
-class Solution(object):
+class mergeKLists(object):
     def mergeKLists(self, lists):
         head = point = ListNode(0)
         pq = PriorityQueue()
