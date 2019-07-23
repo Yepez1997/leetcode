@@ -11,8 +11,8 @@ class Solution(object):
           return True 
         
         # xrange may compute the exlusive range - only works with python 2 
-        graph = [[] for _ in xrange(numCourses)]
-        visited = [0 for _ in xrange(numCourses)]
+        graph = [[] for _ in range(numCourses)]
+        visited = [0 for _ in range(numCourses)]
         
         # set up a directed graph 
         for course in prerequisites:
