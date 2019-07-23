@@ -1,3 +1,4 @@
+# the infamous 01 knapsack problem
 def knapsackProblem(items, capacity):
 	knapsack = [[0 for j in range(0, capacity+1)] for i in range(0, len(items)+1)]
 	for i in range(1, len(items) + 1):

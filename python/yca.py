@@ -1,3 +1,4 @@
+# grab the youngest common ancestory in an n-ary tree 
 def getYoungestCommonAncestor(topAncestor, descendantOne, descendantTwo):
     # Write your code here.
 	nodeOneDepth = getNodeDepth(descendantOne, topAncestor)

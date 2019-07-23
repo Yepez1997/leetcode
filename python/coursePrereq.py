@@ -1,12 +1,5 @@
-from collections import defaultdict
-
-class Solution(object):
+class canFinish(object):
     def canFinish(self, numCourses, prerequisites):
-        """
-        :type numCourses: int
-        :type prerequisites: List[List[int]]
-        :rtype: bool
-        """
         if numCourses < 2:
           return True 
         

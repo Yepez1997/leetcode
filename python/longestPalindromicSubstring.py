@@ -1,5 +1,5 @@
+# longestPalindrome in o(n^2) time -> improvement from an o(n^3)
 def longestPalindromicSubstring(string):
-    # Write your code here.
 	currentLongest = [0,1]
 	for i in range(1, len(string)):
 		odd = getLongestPalindrome(string, i-1, i+1)

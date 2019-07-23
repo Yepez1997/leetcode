@@ -1,4 +1,4 @@
-class Solution(object):
+class maxProfit(object):
     def maxProfit(self, prices):
         minPrice = float('inf')
         maxProfit = 0 
