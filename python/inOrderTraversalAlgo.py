@@ -1,5 +1,5 @@
+# dephtFirstSearch with stack
 def iterativeInOrderTraversal(tree, callback):
-    # Write your code here.
 	stack = []
 	while stack or tree:
 		if tree:

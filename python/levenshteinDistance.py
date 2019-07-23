@@ -1,5 +1,4 @@
 def levenshteinDistance(str1, str2):
-    # Write your code here.
 	edits = [[j for j in range(len(str1) + 1)] for i in range(len(str2) + 1)]
 	for i in range(1, len(str2)+1):
 		edits[i][0] = edits[i-1][0] + 1
@@ -10,3 +9,5 @@ def levenshteinDistance(str1, str2):
 			else:
 				edits[i][j] = 1 + min(edits[i-1][j-1], edits[i-1][j], edits[i][j-1])
 	return edits[-1][-1]
+
+

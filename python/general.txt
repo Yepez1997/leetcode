@@ -1,0 +1,8 @@
+general python stuff 
+a = [[0 for c in range(n)] for r in range(n)]
+where r and c represent row and col 
+to iterate over everything 
+// iterate rows then iterate columns 
+for row in len(a):
+    for col in len(a[row])
+        print(a[row][col])

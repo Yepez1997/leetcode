@@ -3,7 +3,7 @@ class canFinish(object):
         if numCourses < 2:
           return True 
         
-        # xrange may compute the exlusive range - only works with python 2 
+        # range may compute the  - only works with python 2 
         graph = [[] for _ in range(numCourses)]
         visited = [0 for _ in range(numCourses)]
         
