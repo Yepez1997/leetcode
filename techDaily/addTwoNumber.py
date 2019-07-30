@@ -1,4 +1,4 @@
-''' Problem Add Two Numbers As A Linked List -> You are given two linked lists representing non negative integers 
+''' Add Two Numbers As A Linked List -> You are given two linked lists representing non negative integers 
 the results are stored in reverse order such that each of their nodes contain a single digit '''
 
 ''' Definition for Singly Linked List'''
@@ -8,7 +8,7 @@ class ListNode(object):
     self.next = None
 
 # time complexity -> O(max(m,n)) where m is one linkedlist and n is the other 
-# space complexity -> O(n)
+# space complexity -> O(max(m,n))
 class Solution:
   def addTwoNumbers(self, l1, l2, c=0):
         curr = ListNode(0)
