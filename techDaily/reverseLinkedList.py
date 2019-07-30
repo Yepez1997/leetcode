@@ -1,5 +1,12 @@
 ''' Reverse a linked list recursively and iteratively '''
 
+
+''' 
+    Time Complexity - Recursive and Iterative solution takes O(n) time 
+    Space Complexity - Recursive O(n) and Iterative O(1)
+''' 
+
+
 ''' Definition for Singly Linked List'''
 class ListNode(object):
     def __init__(self, x):
@@ -30,7 +37,12 @@ class ListNode(object):
     ''' Recursive solution ''' 
     def reverseRecursively(self, head):
         # Implement this.
-        return 
+        if head is None or head.next is None:
+            return None 
+        node = self.reverseRecursively(head.next)
+        head.next.next = head 
+        head.next = None
+        return node
 
 ''' init the test list ''' 
 testHead = ListNode(4)
