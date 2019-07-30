@@ -1,7 +1,6 @@
 """ Find the duplicate number in the array """
 
 
-
 """ singleNumber - finds the duplicate number in the array """
 def singleNumber(nums):
     result = 0 
