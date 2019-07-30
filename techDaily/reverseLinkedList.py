@@ -44,7 +44,7 @@ class ListNode(object):
         head.next = None
         return node
 
-''' init the test list ''' 
+''' Init the test list ''' 
 testHead = ListNode(4)
 node1 = ListNode(3)
 testHead.next = node1
@@ -58,8 +58,8 @@ node3.next = testTail
 print("Initial list: ")
 testHead.printList()
 # 4 3 2 1 0
-testHead.reverseIteratively(testHead)
-# testHead.reverseRecursively(testHead)
+# testHead.reverseIteratively(testHead)
+testHead.reverseRecursively(testHead)
 print("List after reversal: ")
 testTail.printList()
 # 0 1 2 3 4
