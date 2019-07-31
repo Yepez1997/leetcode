@@ -12,7 +12,6 @@ class Solution:
             evenLen = self.expandString(s, i-1, i)
             currentLongestPalindromeIndex = max(oddLen, evenLen, key = lambda a: a[1] - a[0])
             longestPalindromeIndex =  max(currentLongestPalindromeIndex, longestPalindromeIndex,  key = lambda a: a[1] - a[0])
-        # print(s[longestPalindromeIndex[0]: longestPalindromeIndex[1]])
         return s[longestPalindromeIndex[0]: longestPalindromeIndex[1]]
 
     """ expandString - expand from the current index"""
