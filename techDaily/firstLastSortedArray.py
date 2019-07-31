@@ -7,10 +7,8 @@ class Solution:
         self.modifiedBinarySearch(arr, 0, len(arr), target, False)
         return self.arrRange
 
+    # or just do two seperate binary search algorithms one that forces a left search and one that forces a right search
     def modifiedBinarySearch(self, array, left, right, target, goLeft=False):
-        # if left > right:
-        #     return
-
         while left <= right:
             middle = (left + right) // 2
             if array[middle] < target:
