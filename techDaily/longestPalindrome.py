@@ -18,10 +18,7 @@ class Solution:
     """ expandString - expand from the current index"""
     def expandString(self, s, leftIdx,rightIdx):
         # should return coordintates
-        while leftIdx >= 0 and rightIdx < len(s):
-            if s[leftIdx] != s[rightIdx]:
-                # keep expanding the palindrome 
-                break
+        while leftIdx >= 0 and rightIdx < len(s) and s[leftIdx] == s[rightIdx]:
             leftIdx -= 1
             rightIdx += 1
         return [leftIdx + 1, rightIdx]
