@@ -15,23 +15,11 @@ class Solution:
             return True
         for char in s:
             if char in self.brackets:
-                # add all closing brackets
-                # ")"
-                # need to find "(" ==  "("
+                if len(stack) <= 0:
+                    return False 
                 top = stack.pop()
-                if char == ")":
-                    corresponding = self.brackets[char]
-                    if top != corresponding: return False 
-                    continue
-                if char == "}":
-                    corresponding = self.brackets[char]
-                    if top != corresponding: return False 
-                    continue
-                if char == "]":
-                    corresponding = self.brackets[char]
-                    if top != corresponding: return False 
-                    continue
-
+                corresponding = self.brackets[char]
+                if top != corresponding: return False 
             else:
                 # add all opening brackets
                 stack.append(char)
