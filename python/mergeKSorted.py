@@ -21,5 +21,6 @@ class mergeKLists(object):
           node = node.next
           if node:
             pq.put((node.val, node))
-
         return head.next
+
+
