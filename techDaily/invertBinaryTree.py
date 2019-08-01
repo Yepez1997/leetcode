@@ -1,6 +1,6 @@
-
-
-
+'''
+Invert a Binary Tree 
+'''
 class Node:
     def __init__(self, value):
         self.left = None
