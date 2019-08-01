@@ -1,6 +1,10 @@
 '''
 Invert a Binary Tree 
 '''
+
+
+
+''' Binary Tree Node ''' 
 class Node:
     def __init__(self, value):
         self.left = None
@@ -25,6 +29,7 @@ def invertInorder(node):
     queue.append(node)
     while len(queue) > 0:
         curr = queue.pop(0)
+        # invert the node 
         curr.left , curr.right = curr.right, curr.left 
         if curr.left:
             queue.append(curr.left)
