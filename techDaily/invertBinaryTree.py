@@ -20,6 +20,18 @@ def invert(node):
     invert(root.right)
     return node  
 
+def invertInorder(node):
+    queue = []
+    queue.append(node)
+    while len(queue) > 0:
+        curr = queue.pop(0)
+        curr.left , curr.right = curr.right, curr.left 
+        if curr.left:
+            queue.append(curr.left)
+        if curr.right:
+            queue.append(curr.right)
+    return node 
+
 root = Node('a') 
 root.left = Node('b') 
 root.right = Node('c') 
