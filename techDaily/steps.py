@@ -16,7 +16,6 @@ class Solution:
 
 
 print(Solution().staircase(4) == 5)
-# 5
 print(Solution().staircase(5) == 8)
-# 8
+
 
