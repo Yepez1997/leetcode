@@ -35,5 +35,10 @@ i 5 2
 n 6 2
 g 7 2
 
-if both elements are equal it is the same as ignoring the elements 
+if both elements are equal it is the same as ignoring the elements
+
+recursive formula 
+         dp[i-1][j-1] if i == j
+f(i,j) = o/w 
+        1  + min(dp[i-1][j-1],  dp[i-1][j],  dp[i][j-1]) if i != j 
 '''
