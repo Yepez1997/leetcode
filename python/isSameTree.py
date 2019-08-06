@@ -23,3 +23,14 @@ class Solution(object):
           return False
         # recuse both the left and right subtree for left and right
         return self.isSameTree(p.left, q.left) and self.isSameTree(p.right, q.right)
+
+# ignore this -> just did this randomly 
+def reverseLinkedList(node):
+    prev = None 
+    curr = node 
+    while curr:
+        nextNode = curr.next 
+        curr.next = prev 
+        prev = curr
+        curr = curr.next
+    return prev 
