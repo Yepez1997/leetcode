@@ -32,5 +32,5 @@ def reverseLinkedList(node):
         nextNode = curr.next 
         curr.next = prev 
         prev = curr
-        curr = curr.next
+        curr = nextNode
     return prev 
