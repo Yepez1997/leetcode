@@ -1,3 +1,5 @@
+''' check if there is a single cycle  ''' 
+
 def hasSingleCycle(array):
 	numElementsSeen = 0
 	currentIndex = 0
