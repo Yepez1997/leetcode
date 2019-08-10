@@ -1,4 +1,11 @@
+'''
+Build a simple calculator that supports addition and subtraction 
+'''
 
+
+
+# Time Complexity -> O(n)
+# Space Complexity -> O(n)
 class Solution:
     def simpleCalculator(self, expression):
         expression =  [i for i in expression]
@@ -29,7 +36,7 @@ class Solution:
                 # done with the inside of the stack 
                 return (result, index)
             index += 1
-
+        # pass the index so the parent knows which function to go off of 
         return (result, index)
 
 
