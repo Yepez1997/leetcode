@@ -12,7 +12,8 @@ def checkCycle(graph):
         
 ''' exploreGraph - simple dfs traversal '''
 def exploreGraph(vertex, seen, graph):
-    # base case to check if there is a cycle 
+    # base case to check if there is a cycle
+    # or do the visiting/visited methods  
     if vertex in seen:
         return True 
     # add the value to seen 
